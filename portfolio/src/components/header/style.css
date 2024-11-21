@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+  }
+  
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Aligne la barre à droite de l'écran */
+  }
+  
+  .container_header {
+    background: #3E5151;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #DECBA4, #3E5151); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 50%; /* La barre occupe 50% de la largeur de la fenêtre */
+    padding: 15px 5%;
+    margin-top: 20px;
+    border-radius: 112px 0px 0px 112px / 109px 0px 1px 109px;
+    animation: slideIn 1s ease-out forwards; /* Animation de la barre */
+    display: flex;
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Centre les éléments verticalement */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%); /* La barre commence à droite hors de l'écran */
+    }
+    to {
+      transform: translateX(0); /* La barre glisse jusqu'à sa position à 50% de l'écran */
+    }
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around; /* Aligne le menu à gauche et le bouton à droite */
+  }
+  
+  .nav_ul {
+    display: flex;
+    gap: 30px; /* Espacement entre les éléments du menu */
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Supprimer les puces de liste */
+  }
+  
+  .nav_li {
+    font-size: 30px;
+    color: white;
+  }
+  
+  .button_cv {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 15px;
+    border: none;
+    border-radius: 50%; /* Bouton rond */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animation de transformation */
+  }
+  
+  .button_cv:hover {
+    background-color: #0056b3; /* Couleur du bouton au survol */
+    transform: scale(1.2) rotate(360deg); /* Agrandissement et rotation de 360° */
+  }
+  
