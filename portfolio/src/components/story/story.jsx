@@ -1,31 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect, useRef, useState } from "react";
 import "../story/style.css";
-import { ScrollReveal } from "../index";
 
 export function Story() {
-  const storyRef = useRef();
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setInView(true);
-        observer.unobserve(storyRef.current); 
-      }
-    }, { threshold: 0.1 });
-
-    observer.observe(storyRef.current);
-
-    return () => observer.disconnect(); 
-  }, []);
 
   return (
     
-    <div className="container" id="story">
-    <div className={`container-story ${inView ? "in-view" : ""}`} ref={storyRef}>
-      <ScrollReveal/>
-      <h1 className="title-h1">À Propos</h1>
+    <div className="container">
       <p className="content-p">
       Je m'appelle Fabien Jego et je suis un développeur web front-end
           passionné par la technologie et le développement. Diplômé d'une
@@ -49,7 +29,6 @@ export function Story() {
           enthousiaste, rigoureux et prêt à relever des défis, je serais honoré
           de rejoindre votre équipe et de contribuer activement à vos projets.
           </p>
-    </div>
     </div>
   );
 }

@@ -1,9 +1,8 @@
-import { Header, HomePage } from "../components/index";
+import {  HomePage} from "../components/index/index";
 
 export function Home () {
     return(
         <div>
-            <Header/>
             <HomePage/>
         </div>
     )

@@ -1,36 +1,45 @@
-import { Link } from "react-scroll";
+import { useDispatch, useSelector } from "react-redux";
+import { setActiveSection } from "../../slices/slicesAbout";
 import "./style.css";
 
 export function Header() {
-    return (
-        <div className="header">
-            <div className="container_header">
-                <nav className="nav">
-                    <ul className="nav_ul">
-                        <li className="nav_li">
-                            <Link to="story" smooth={true} duration={500}>
-                                À propos
-                            </Link>
-                        </li>
-                        <li className="nav_li">
-                            <Link to="competences" smooth={true} duration={500}>
-                                compétences
-                            </Link>
-                        </li>
-                        <li className="nav_li">
-                            <Link to="projet" smooth={true} duration={500}>
-                                projet
-                            </Link>
-                        </li>
-                        <li className="nav_li">
-                            <Link to="contact" smooth={true} duration={500}>
-                                contact
-                            </Link>
-                        </li>
-                    </ul>
-                    <button className="button_cv">C.V</button>
-                </nav>
-            </div>
+  const dispatch = useDispatch();
+  const activeButton = useSelector((state) => state.section.activeSection);
+
+  const handleButtonClick = (section) => {
+    dispatch(setActiveSection(section));
+  };
+
+  return (
+    <div>
+      <section className="section-header">
+        <div className="container-header-button">
+          <button
+            className={`button-header fa-solid fa-house logo ${activeButton === 'home' ? "active" : ""}`}
+            onClick={() => handleButtonClick('home')}
+          >
+            Home
+          </button>
+          <button
+            className={`button-header fa-solid fa-user logo ${activeButton === 'about' ? "active" : ""}`}
+            onClick={() => handleButtonClick('about')}
+          >
+            À propos
+          </button>
+          <button
+            className={`button-header fa-solid fa-diagram-project logo ${activeButton === 'projects' ? "active" : ""}`}
+            onClick={() => handleButtonClick('projects')}
+          >
+            Projet
+          </button>
+          <button
+            className={`button-header fa-solid fa-address-card logo ${activeButton === 'contact' ? "active" : ""}`}
+            onClick={() => handleButtonClick('contact')}
+          >
+            Contact
+          </button>
         </div>
-    );
+      </section>
+    </div>
+  );
 }

@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1c1c1c, #000000); /* Ajout d'un dégradé subtil pour le fond */
+  }
+  
+  .background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .shape {
+    position: absolute;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2)); /* Ajout d'un effet lumineux */
+    transition: transform 0.2s ease-out, filter 0.2s ease-out;
+  }
+  
+  /* Cercle futuriste */
+  .circle {
+    top: 10%;
+    left: 5%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 200, 0.6), rgba(0, 0, 255, 0.2));
+    animation: pulse 3s infinite ease-in-out; /* Animation de pulsation */
+  }
+  
+  /* Triangle futuriste */
+  .triangle {
+    top: 10%;
+    right: 5%;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid rgba(255, 200, 0, 0.7);
+    filter: drop-shadow(0 0 30px rgba(255, 200, 0, 0.6)); /* Lumière projetée */
+    transform: rotate(15deg); /* Inclinaison pour un effet dynamique */
+  }
+  
+  /* Triangle inversé futuriste */
+  .triangle2 {
+    top: 87%;
+    right: 89%;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 200px solid rgba(200, 100, 255, 0.7); /* Couleur différente */
+    filter: drop-shadow(0 0 30px rgba(200, 100, 255, 0.6));
+    transform: rotate(-30deg);
+  }
+  
+  /* Carré futuriste */
+  .square {
+    top: 1%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.6), rgba(0, 100, 255, 0.3));
+    transform: translateX(-50%) rotate(15deg); /* Rotation dynamique */
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5); /* Glow lumineux */
+  }
+  
+  /* Carré supplémentaire */
+  .square2 {
+    top: 86%;
+    left: 85%;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, rgba(0, 255, 100, 0.7), rgba(0, 255, 255, 0.3));
+    transform: translateX(-50%) rotate(-10deg);
+    box-shadow: 0 0 40px rgba(0, 255, 100, 0.5);
+  }
+  
+  /* Animation de pulsation pour le cercle */
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      filter: drop-shadow(0 0 20px rgba(255, 0, 200, 0.6));
+    }
+    50% {
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 40px rgba(255, 0, 200, 1));
+    }
+  }
+  
