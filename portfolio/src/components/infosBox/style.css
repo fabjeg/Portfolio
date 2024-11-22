@@ -1,0 +1,31 @@
+
+.info-box {
+    background-color: #292929;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: inset 3px 3px 3px #202125, inset -3px -3px 3px #353535;
+    width: 30%;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .info-label {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .info-value {
+    font-size: 20px;
+    text-align: left;
+    padding: 10px;
+    color: #ddd;
+  }
+  
+  tr:not(:last-child) td {
+    border-bottom: 1px solid #444;
+  }

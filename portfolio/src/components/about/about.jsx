@@ -1,35 +1,34 @@
-import  { useState } from 'react';
-import './style.css';
-import { Story } from '../index';
+import "./style.css";
+import { Competence, Header, InfoBox, InteractiveBackground, Story } from "../index";
 
 export function About() {
-  const [expanded, setExpanded] = useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+ 
 
   return (
-    <div className="container-about">
-      <div className="header">
-        <p>Sur moi</p>
-      </div>
-      <div className={`title-about ${expanded ? 'expanded' : ''}`}>
-        <h1 onClick={handleExpandClick}>Fabien Jégo</h1>
-      </div>
-      <div className={`story-content ${expanded ? 'expanded' : ''}`}>
-        <Story />
-      </div>
-      <div className={`description ${expanded ? 'expanded' : ''}`}>
-        <div className="container1">
-          <span>Nom:</span>
-          <font>Jégo</font>
+    <div className="container-ghost">
+    <div className="about-page">
+      <InteractiveBackground />
+      <div className="container-about">
+        <div className="font">
+          <font>Sur moi</font>
         </div>
-        <div className="container2">
-          <span>E-mail:</span>
-          <font>fabien.jego.p@gmail.com</font>
+        <div className="title-about">
+          <h2>Fabien Jégo</h2>
+        </div>
+        <div className="story">
+          <Story />
+        </div>
+        <div>
+         <InfoBox/>
+        </div>
+        <div>
+            <Competence/>
         </div>
       </div>
+      <div  className="header-about">
+      <Header/>
+      </div>
+    </div>
     </div>
   );
 }

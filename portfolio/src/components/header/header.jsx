@@ -1,41 +1,24 @@
-import { useDispatch, useSelector } from "react-redux";
-import { setActiveSection } from "../../slices/slicesAbout";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 
 export function Header() {
-  const dispatch = useDispatch();
-  const activeButton = useSelector((state) => state.section.activeSection);
-
-  const handleButtonClick = (section) => {
-    dispatch(setActiveSection(section));
-  };
+  const navigate = useNavigate();
 
   return (
     <div>
       <section className="section-header">
         <div className="container-header-button">
+          <button onClick={() => navigate("/")} className="button-header fa-solid fa-house logo">Home</button>
           <button
-            className={`button-header fa-solid fa-house logo ${activeButton === 'home' ? "active" : ""}`}
-            onClick={() => handleButtonClick('home')}
-          >
-            Home
-          </button>
-          <button
-            className={`button-header fa-solid fa-user logo ${activeButton === 'about' ? "active" : ""}`}
-            onClick={() => handleButtonClick('about')}
+            onClick={() => navigate("/about")}
+            className="button-header fa-solid fa-user logo"
           >
             À propos
           </button>
-          <button
-            className={`button-header fa-solid fa-diagram-project logo ${activeButton === 'projects' ? "active" : ""}`}
-            onClick={() => handleButtonClick('projects')}
-          >
+          <button className="button-header fa-solid fa-diagram-project logo">
             Projet
           </button>
-          <button
-            className={`button-header fa-solid fa-address-card logo ${activeButton === 'contact' ? "active" : ""}`}
-            onClick={() => handleButtonClick('contact')}
-          >
+          <button className="button-header fa-solid fa-address-card logo">
             Contact
           </button>
         </div>

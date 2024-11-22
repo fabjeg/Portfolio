@@ -5,6 +5,8 @@ import { InteractiveBackground } from "../interactiveBackground/interactiveBackg
 import { About } from "../about/about";
 import { Contact } from "../contact/contact";
 import { Projects } from "../projects/projects";
+import { InfoBox } from "../infosBox/infos-box";
+import { Competence } from "../competence/competence";
 
 export {
   HomePage,
@@ -14,4 +16,6 @@ export {
   About,
   Contact,
   Projects,
+  InfoBox,
+  Competence
 };
