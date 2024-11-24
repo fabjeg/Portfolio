@@ -1,13 +1,18 @@
-.container {
+.container-Story {
   display: flex;
   margin-left: 2rem;
   margin-right: 2rem;
 }
-
-
 .content-p {
   text-align: left;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
   margin: 20px 0 0 2rem;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+}
+@media (max-width: 920px) {
+  .container-Story {
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -14,7 +14,6 @@ export function InfoBox () {
       ];
     return(
         <div className="container-informations">
-             {/* Informations Personnelles */}
           <div className="info-box">
             <table>
               <tbody>
@@ -27,7 +26,6 @@ export function InfoBox () {
               </tbody>
             </table>
           </div>
-          {/* Détails de Contact */}
           <div className="info-box">
             <table>
               <tbody>

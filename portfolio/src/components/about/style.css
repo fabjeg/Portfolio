@@ -1,48 +1,67 @@
-
-
 body {
   margin: 0;
   padding: 0;
   overflow: auto;
   background-color: #1c1c1c; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
 }
-.header-about{
+
+.header-about {
   position: sticky;
   top: 0;
   z-index: 10;
   background-color: #2c2d30;
   border-radius: 50px;
-}
-.about-page {
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: auto;
+}
+
+.aboutPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   gap: 2%;
 }
-.container-about {
+
+.aboutPage-section {
   position: relative;
   z-index: 1;
   border-radius: 50px;
-  width: 100vh;
-  height: auto;
+  width: 120vh;
+  height: 80vh;
   background-color: #2c2d30;
+  box-shadow: 3px 3px 3px #202125, -3px -3px 3px #353535;
+  overflow-y: auto;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
 }
-.font{
-  width: 30%;
-  color: white;
-  margin: 4rem 0 0 4rem;
-  font-size: 25px;
-  font-weight: 400;
+
+.aboutPage-section::-webkit-scrollbar {
+  width: 10px;
 }
-.title-about{
-  color: white;
-  font-size: 35px;
-  margin: 5rem 0 0 5rem;
-}
-.container-informations {
+
+
+
+.titleAbout {
   display: flex;
   justify-content: center;
-  gap: 10%;
-  margin: 4rem 0 4rem 0;
+  color: white;
+  margin-top: 20px; 
+}
+
+@media (max-width: 920px) {
+  .aboutPage {
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: scroll;
+  }
+  .aboutPage-section{
+    width: 75%;
+  }
 }

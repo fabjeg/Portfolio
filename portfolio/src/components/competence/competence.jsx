@@ -26,8 +26,8 @@ export function Competence() {
     ];
 
     return (
-        <div className='title'>
-            <h3 id="competence" name="competence">Compétences</h3>
+        <div className='title-competence'>
+            <h3 name="competence">Compétences</h3>
             <div className="container">
                 <div className='container-icons'>
                     {skills.map((skill, index) => (

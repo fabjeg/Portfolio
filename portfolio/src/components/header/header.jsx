@@ -6,9 +6,20 @@ export function Header() {
 
   return (
     <div>
-      <section className="section-header">
+      <div className="section-header">
+        <div className="container-button">
+          <div className="button-cv">
+            <button className="fa-solid fa-check button"></button>
+            <p>Télécharger mon CV</p>
+          </div>
+        </div>
         <div className="container-header-button">
-          <button onClick={() => navigate("/")} className="button-header fa-solid fa-house logo">Home</button>
+          <button
+            onClick={() => navigate("/")}
+            className="button-header fa-solid fa-house logo"
+          >
+            Home
+          </button>
           <button
             onClick={() => navigate("/about")}
             className="button-header fa-solid fa-user logo"
@@ -22,7 +33,7 @@ export function Header() {
             Contact
           </button>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

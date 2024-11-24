@@ -5,7 +5,7 @@ export function Story() {
 
   return (
     
-    <div className="container">
+    <div className="container-Story">
       <p className="content-p">
       Je m'appelle Fabien Jego et je suis un développeur web front-end
           passionné par la technologie et le développement. Diplômé d'une
