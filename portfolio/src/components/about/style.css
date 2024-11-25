@@ -8,7 +8,6 @@ body {
   align-items: center;
   min-height: 100vh; 
 }
-
 .header-about {
   position: sticky;
   top: 0;
@@ -20,7 +19,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .aboutPage {
   display: flex;
   justify-content: center;
@@ -28,10 +26,9 @@ body {
   min-height: 100vh;
   gap: 2%;
 }
-
 .aboutPage-section {
   border-radius: 50px;
-  width: 120vh;
+  width: 75%;
   height: 80vh;
   background-color: #2c2d30;
   box-shadow: 3px 3px 3px #202125, -3px -3px 3px #353535;
@@ -39,20 +36,16 @@ body {
   scrollbar-width: none; 
   -ms-overflow-style: none;
 }
-
 .aboutPage-section::-webkit-scrollbar {
   width: 10px;
 }
-
-
-
 .titleAbout {
   text-align: center;
   font-size: 25px;
   color: white;
   margin-top: 20px; 
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
 }
-
 @media (max-width: 920px) {
   .aboutPage {
     display: flex;

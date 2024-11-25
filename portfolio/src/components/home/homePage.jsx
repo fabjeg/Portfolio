@@ -1,6 +1,5 @@
 import { Header, InteractiveBackground } from "../index";
 import "./style.css";
-import video from "../../assets/video/Développer front-end.mp4";
 
 export function HomePage() {
   return (
@@ -8,16 +7,11 @@ export function HomePage() {
       <InteractiveBackground />
       <section className="homePage-section">
         <div className="title-home">
-          <h1>Fabien Jego</h1>
+          <h1 className="fade-in">Fabien Jego</h1>
+          <p className="slide-in">Front-End Developer</p>
         </div>
         <div className="video">
-          <video
-            src={video}
-            autoPlay
-            loop
-            muted
-            className="video-background"
-          ></video>
+       
         </div>
       </section>
       <Header />

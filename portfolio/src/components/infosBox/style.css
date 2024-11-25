@@ -1,7 +1,7 @@
 .container-informations{
   display: flex;
   justify-content: space-between;
-  margin: 2% 2% 2% 2%;
+  margin: 2% 2% 2% 4%;
 }
 .info-box {
   background-color: #292929;
@@ -11,26 +11,24 @@
   width: 40%;
   overflow: hidden;
 }
-
 table {
   width: 100%;
   border-collapse: collapse;
 }
-
 .info-label {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   text-align: left;
   padding: 10px;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
 }
-
 .info-value {
-  font-size: 20px;
+  font-size: 18px;
   text-align: left;
   padding: 10px;
   color: #ddd;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
 }
-
 tr:not(:last-child) td {
   border-bottom: 1px solid #444;
 }
@@ -42,5 +40,13 @@ tr:not(:last-child) td {
   }
   .info-box{
     width: 74%;
+  }
+  .info-label{
+    font-size: 15px;
+    overflow-wrap: break-word;
+  }
+  .info-value {
+    font-size: 14px;
+    overflow-wrap: break-word;
   }
 }
