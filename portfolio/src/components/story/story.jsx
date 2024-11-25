@@ -15,13 +15,6 @@ export function Story() {
           des projets ambitieux et soignés.
       </p>
       <p className="content-p">
-      Mon intérêt pour l'informatique, m'a
-          naturellement conduit à transformer cette passion en carrière.
-          Toujours curieux et motivé, je cherche sans cesse à élargir mes
-          compétences, à découvrir de nouvelles technologies et à apporter ma
-          contribution à des projets stimulants.
-      </p>
-      <p className="content-p">
       {" "}
           Je suis actuellement à la recherche de nouvelles opportunités
           professionnelles et je suis ouvert aux collaborations pour des projets

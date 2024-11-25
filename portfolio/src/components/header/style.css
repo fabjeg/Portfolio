@@ -61,7 +61,13 @@ body {
   gap: 10px;
 }
 .button-cv p {
-  margin-right: 30px;
+  color: white;
+  font-size: 25px;
+ margin-right: 30px;
+ font-family: "Poppins", Helvetica, Arial, sans-serif;
+}
+.button-cv p:hover{
+  color: #4caf50;
 }
 .button {
   border-radius: 50%;

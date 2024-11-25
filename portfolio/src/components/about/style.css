@@ -30,8 +30,6 @@ body {
 }
 
 .aboutPage-section {
-  position: relative;
-  z-index: 1;
   border-radius: 50px;
   width: 120vh;
   height: 80vh;
@@ -49,8 +47,8 @@ body {
 
 
 .titleAbout {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  font-size: 25px;
   color: white;
   margin-top: 20px; 
 }

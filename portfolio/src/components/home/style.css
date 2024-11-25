@@ -11,8 +11,6 @@ body {
   
 }
 .homePage-section {
-  position: relative;
-  z-index: 1;
   border-radius: 50px;
   width: 120vh;
   height: 80vh;
@@ -25,6 +23,7 @@ body {
   color: white;
   font-size: 3rem;
   transition: transform 0.3s ease, color 0.3s ease;
+  margin: 15px 0 0 0;
 }
 .title-home h1 {
   margin: 0;
@@ -49,12 +48,16 @@ video {
  }
  .homePage-section{
   width: 75%;
-  padding: 25%;
  }
  .title-home{
   font-size: 2rem;
+  margin-top: 15%;
  }
  .video{
   margin-top: 37%;
+  overflow: hidden;
+  width: 90%;
+  height: 60%;
+  margin-left: 5%;
  }
 }

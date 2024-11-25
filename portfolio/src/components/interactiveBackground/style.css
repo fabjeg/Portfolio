@@ -1,98 +1,126 @@
 body {
+  position: relative;
+  z-index: -1;
   margin: 0;
   overflow: hidden;
-  background: #2d2d2f;
+  background: #1b1b1d; 
 }
 
 .background {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   z-index: -1;
 }
 
 .shape {
   position: absolute;
-  opacity: 0.9;
-  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
-  transition: transform 0.2s ease-out, filter 0.2s ease-out;
+  opacity: 0.8;
+  animation: pulse-dots 4s infinite ease-in-out;
+  transition: transform 0.1s ease-out;
 }
 
 .circle {
-  top: 10%;
-  left: 5%;
+  top: 0%;
+  left: 0%;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 0, 200, 0.6),
-    rgba(0, 0, 255, 0.2)
-  );
-  animation: pulse 3s infinite ease-in-out;
+  background: radial-gradient(circle, rgba(80, 80, 80, 0.9) 30%, transparent 30%);
+  background-size: 25px 25px;
+}
+
+.circle2 {
+  top: 81%;
+  left: 41%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(80, 80, 80, 0.9) 30%, transparent 30%);
+  background-size: 25px 25px;
 }
 
 .triangle {
-  top: 10%;
-  right: 5%;
+  top: 2%;
+  right: 0%;
   width: 0;
   height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 200px solid rgba(255, 200, 0, 0.7);
-  filter: drop-shadow(0 0 30px rgba(255, 200, 0, 0.6));
-  transform: rotate(15deg);
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent; 
+  border-bottom: 250px solid rgba(150, 150, 150, 0.8);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
 .triangle2 {
-  top: 87%;
-  right: 89%;
+  top: 79%;
+  left: 0%; 
   width: 0;
   height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-top: 200px solid rgba(200, 100, 255, 0.7);
-  filter: drop-shadow(0 0 30px rgba(200, 100, 255, 0.6));
-  transform: rotate(-30deg);
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent; 
+  border-top: 200px solid rgba(150, 150, 150, 0.8);
+  clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
 }
 
 .square {
-  top: 1%;
+  top: 5%;
   left: 50%;
   width: 120px;
   height: 120px;
-  background: linear-gradient(
-    45deg,
-    rgba(0, 255, 255, 0.6),
-    rgba(0, 100, 255, 0.3)
-  );
-  transform: translateX(-50%) rotate(15deg);
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+  background: radial-gradient(circle, rgba(80, 80, 80, 0.9) 30%, transparent 30%);
+  background-size: 25px 25px;
+  transform: translateX(-50%) rotate(10deg);
 }
 
 .square2 {
-  top: 86%;
-  left: 85%;
-  width: 120px;
-  height: 120px;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 255, 100, 0.7),
-    rgba(0, 255, 255, 0.3)
-  );
-  transform: translateX(-50%) rotate(-10deg);
-  box-shadow: 0 0 40px rgba(0, 255, 100, 0.5);
+  top: 83%;
+  right: 10%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(80, 80, 80, 0.9) 30%, transparent 30%);
+  background-size: 25px 25px;
+  transform: rotate(-10deg);
 }
 
-@keyframes pulse {
-  0%,
-  100% {
+.hexagon {
+  top: 40%;
+  left: 10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(80, 80, 80, 0.9) 30%, transparent 30%);
+  background-size: 25px 25px;
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+}
+
+.hexagon2 {
+  top: 50%;
+  left: 90%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(80, 80, 80, 0.9) 30%, transparent 30%);
+  background-size: 25px 25px;
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+}
+
+@keyframes pulse-dots {
+  0%, 100% {
     transform: scale(1);
-    filter: drop-shadow(0 0 20px rgba(255, 0, 200, 0.6));
   }
   50% {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 40px rgba(255, 0, 200, 1));
+    transform: scale(1.1);
   }
 }

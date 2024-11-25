@@ -10,7 +10,7 @@ export function Header() {
         <div className="container-button">
           <div className="button-cv">
             <button className="fa-solid fa-check button"></button>
-            <p>Télécharger mon CV</p>
+            <p> Mon CV</p>
           </div>
         </div>
         <div className="container-header-button">
@@ -26,7 +26,9 @@ export function Header() {
           >
             À propos
           </button>
-          <button className="button-header fa-solid fa-diagram-project logo">
+          <button 
+          onClick={() => navigate("/project")}
+          className="button-header fa-solid fa-diagram-project logo">
             Projet
           </button>
           <button className="button-header fa-solid fa-address-card logo">
