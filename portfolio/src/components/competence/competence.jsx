@@ -8,6 +8,7 @@ import redux from "../../assets/images/icons/Redux.png";
 import reduxToolkit from "../../assets/images/icons/Redux-Toolkit.png";
 import github from "../../assets/images/icons/github.png"
 import mongodb from "../../assets/images/icons/mongodb.png"
+import figma from "../../assets/images/icons/figma.png"
 import "./style.css";
 
 export function Competence() {
@@ -21,13 +22,15 @@ export function Competence() {
         { src: redux, alt: "Redux", text: "Redux" },
         { src: reduxToolkit, alt: "Redux Toolkit", text: "Toolkit" },
         { src: github, alt: "github", text: "github" },
-        { src: mongodb, alt: "mongodb", text: "mongoDB" }
+        { src: mongodb, alt: "mongodb", text: "mongoDB" },
+        { src: figma, alt: "Figma", text: "Figma" }
         
     ];
 
     return (
         <div className='title-competence'>
-            <h3 name="competence">Compétences</h3>
+            <h3>Compétences</h3>
+            <div className="border-title"></div>
             <div className="container">
                 <div className='container-icons'>
                     {skills.map((skill, index) => (

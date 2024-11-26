@@ -1,16 +1,21 @@
 import "./style.css";
 import { useNavigate } from "react-router-dom";
+import { saveAs } from 'file-saver';
 
 export function Header() {
   const navigate = useNavigate();
+
+  const handleDownload = () => {
+    saveAs('/cv/C_V_Fabien_JEGO.pdf', 'C_V_Fabien_JEGO.pdf');
+  };
 
   return (
     <div>
       <div className="section-header">
         <div className="container-button">
           <div className="button-cv">
-            <button className="fa-solid fa-check button"></button>
-            <p> Mon CV</p>
+            <button className="fa-solid fa-check button" onClick={handleDownload}></button>
+            <p>Mon CV</p>
           </div>
         </div>
         <div className="container-header-button">

@@ -24,6 +24,9 @@
   color: white;
   font-family: "Poppins", Helvetica, Arial, sans-serif;
 }
+.title-project-page h2{
+  margin: 10px 0 0 0;
+}
 .project-title {
   display: flex;
   align-items: center;
@@ -32,6 +35,7 @@
   padding: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   font-family: "Poppins", Helvetica, Arial, sans-serif;
+  margin-top: 20px;
 }
 
 .project-pictures {

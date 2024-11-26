@@ -43,6 +43,7 @@ body {
 
 .button-header:hover {
   transform: translateY(2px);
+  color: #E32207;
 }
 
 .button-header.active {
@@ -67,7 +68,7 @@ body {
  font-family: "Poppins", Helvetica, Arial, sans-serif;
 }
 .button-cv p:hover{
-  color: #4caf50;
+  color: #E32207;
 }
 .button {
   border-radius: 50%;
@@ -81,7 +82,7 @@ body {
 }
 
 .button:hover {
-  background-color: #4caf50;
+  background-color: #E32207;
   transform: scale(1.1);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }

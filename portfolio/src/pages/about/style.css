@@ -46,6 +46,26 @@ body {
   margin-top: 20px; 
   font-family: "Poppins", Helvetica, Arial, sans-serif;
 }
+.border-title{
+  position: relative;
+  box-shadow: inset 1.5px 1.5px 1.5px #202125, inset -1.5px -1.5px 1.5px #353535;
+  height: 0.5rem;
+  border-radius: 1em;
+  border: 0;
+  width: 20%;
+  margin: 10px 0 0 40%
+}
+.border-title:after{
+  position: absolute;
+  content: "";
+  height: 0.25rem;
+  background: #f56c6d;
+  width: 42%;
+  border-radius: 3em;
+}
+.titleAbout h1{
+  margin: 0;
+}
 @media (max-width: 920px) {
   .aboutPage {
     display: flex;
