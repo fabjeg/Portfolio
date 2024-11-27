@@ -10,7 +10,7 @@ export function Header() {
     if (icon) {
       icon.classList.add("rotate");
     }
-    saveAs("/cv/C_V_Fabien_JEGO.pdf", "C_V_Fabien_JEGO.pdf");
+    saveAs("/CV/C_V_Fabien_JEGO.pdf", "C_V_Fabien_JEGO.pdf");
   };
 
   return (

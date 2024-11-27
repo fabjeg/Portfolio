@@ -7,6 +7,7 @@ import { Contact } from "../pages/contact/contact";
 import { Projects } from "../pages/projects/projects";
 import { InfoBox } from "../components/infosBox/infos-box";
 import { Competence } from "../components/competence/competence";
+import { Form } from "../components/index";
 
 export {
   HomePage,
@@ -18,4 +19,5 @@ export {
   Projects,
   InfoBox,
   Competence,
+  Form
 };

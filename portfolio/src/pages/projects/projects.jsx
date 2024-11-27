@@ -20,7 +20,10 @@ export function Projects() {
               className="project-pictures"
             />
             <div className="project-content">
+              <div>
               <h3>{proj.name}</h3>
+              <div className="border-title-project"></div>
+              </div>
               <font>{proj.text}</font>
               <div className="project-competences">
                 {(Array.isArray(proj.competences) ? proj.competences : []).map(

@@ -54,8 +54,26 @@
 .project-content h3 {
   font-size: 28px;
   color: #ffffff;
+  margin: 0;
 }
-
+.border-title-project{
+  position: relative;
+  box-shadow: inset 1.5px 1.5px 1.5px #202125, inset -1.5px -1.5px 1.5px #353535;
+  height: 0.5rem;
+  border-radius: 1em;
+  border: 0;
+  width: 20%;
+  margin-bottom: 2%;
+}
+.border-title-project:after{
+  position: absolute;
+  content: "";
+  height: 0.25rem;
+  background: #f56c6d;
+  width: 42%;
+  border-radius: 3em;
+  margin-left: 2%;
+}
 .project-content font {
   color: #d3d3d3;
   font-size: 25px;
@@ -107,9 +125,6 @@
 @media (max-width: 920px) {
   .projectPage{
     flex-direction: column-reverse;
-  }
-  .project-section{
-    width: 75%;
   }
   .project-title{
     flex-direction: column;

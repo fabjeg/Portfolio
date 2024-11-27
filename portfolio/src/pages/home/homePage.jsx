@@ -10,8 +10,6 @@ export function HomePage() {
           <h1 className="fade-in">Fabien Jego</h1>
           <p className="slide-in">développeur front end</p>
         </div>
-        <div className="container-home">
-        </div>
       </section>
       <Header />
     </div>
