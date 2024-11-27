@@ -14,6 +14,7 @@ body {
   height: 80vh;
   background-color: #2c2d30;
   box-shadow: 3px 3px 3px #202125, -3px -3px 3px #353535;
+  gap: 12%;
 }
 
 .container-header-button {
@@ -43,7 +44,7 @@ body {
 
 .button-header:hover {
   transform: translateY(2px);
-  color: #E32207;
+  color: #e32207;
 }
 
 .button-header.active {
@@ -61,14 +62,32 @@ body {
   align-items: center;
   gap: 10px;
 }
-.button-cv p {
-  color: white;
+.cv {
   font-size: 25px;
- margin-right: 30px;
- font-family: "Poppins", Helvetica, Arial, sans-serif;
+  margin: 0 30px 0 0;
 }
-.button-cv p:hover{
-  color: #E32207;
+.cv p {
+  color: white;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+}
+.button-cv p:hover {
+  color: #e32207;
+}
+.border-title-header {
+  position: relative;
+  box-shadow: inset 1.5px 1.5px 1.5px #202125, inset -1.5px -1.5px 1.5px #353535;
+  height: 0.5rem;
+  border-radius: 1em;
+  border: 0;
+}
+.border-title-header:after {
+  position: absolute;
+  content: "";
+  height: 0.25rem;
+  background: #f56c6d;
+  width: 59%;
+  border-radius: 3em;
+  margin-left: 22%;
 }
 .button {
   border-radius: 50%;
@@ -82,9 +101,29 @@ body {
 }
 
 .button:hover {
-  background-color: #E32207;
   transform: scale(1.1);
   transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.fa-download {
+  color: white;
+  position: relative;
+  top: 38%;
+  left: 38%;
+  font-size: 25px;
+}
+.rotate {
+  animation: rotate 1s ease-in-out;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.fa-download:hover {
+  color: #e32207;
 }
 @media (max-width: 920px) {
   .section-header {

@@ -1,4 +1,4 @@
-import { Header, InteractiveBackground } from "../../index/index";
+import { Header, InteractiveBackground} from "../../index/index";
 import "./style.css";
 
 export function HomePage() {
@@ -9,6 +9,8 @@ export function HomePage() {
         <div className="title-home">
           <h1 className="fade-in">Fabien Jego</h1>
           <p className="slide-in">développeur front end</p>
+        </div>
+        <div className="container-home">
         </div>
       </section>
       <Header />
