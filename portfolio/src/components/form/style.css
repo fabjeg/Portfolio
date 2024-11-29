@@ -71,7 +71,7 @@
   }
   
   .input-error {
-    border-color: #f56c6d; /* Met en surbrillance les champs avec une erreur */
+    border-color: #f56c6d; 
   }
   
   .submit-button:hover {
@@ -84,6 +84,9 @@
   
     .input-form {
       width: 100%;
+    }
+    .form{
+      margin-inline: -8%;
     }
   }
   

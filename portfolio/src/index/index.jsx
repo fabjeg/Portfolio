@@ -7,7 +7,10 @@ import { Contact } from "../pages/contact/contact";
 import { Projects } from "../pages/projects/projects";
 import { InfoBox } from "../components/infosBox/infos-box";
 import { Competence } from "../components/competence/competence";
-import { Form } from "../components/index";
+import { Form } from "../components/form/form";
+import { Map } from "../components/map/map";
+import {ProjectMap} from "../components/projectsMap/projectMap"
+import { Slide } from "../components/slide/slide";
 
 export {
   HomePage,
@@ -19,5 +22,8 @@ export {
   Projects,
   InfoBox,
   Competence,
-  Form
+  Form,
+  Map,
+  ProjectMap,
+  Slide
 };

@@ -73,6 +73,15 @@ const portfolio = [
     site: "",
     competences: ["React", "Redux", "MongoDB"],
   },
+  {
+    id: "b4c67937",
+    name: "Argent Bank Redux",
+    image: [Argentbank],
+    text: "En tant que développeur front-end chez Argent Bank, j'ai travaillé sur la création du tableau de bord des utilisateurs. La première phase impliquait de créer une application web réactive avec React, en utilisant Redux pour la gestion de l'état. Dans la phase 2, j'ai modifié le backend en créant trois nouvelles routes : une route POST pour envoyer les données dans MongoDB, une route GET pour récupérer les données, et une route PUT pour modifier les types de transaction. J'ai également travaillé sur le nouveau visuel du site, en intégrant des mises à jour visuelles pour améliorer l'interface utilisateur.",
+    code: "",
+    site: "",
+    competences: ["React", "Redux", "MongoDB"],
+  }
 ];
 
 export default portfolio;

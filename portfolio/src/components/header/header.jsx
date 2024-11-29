@@ -11,6 +11,9 @@ export function Header() {
       icon.classList.add("rotate");
     }
     saveAs("/CV/C_V_Fabien_JEGO.pdf", "C_V_Fabien_JEGO.pdf");
+    setTimeout(() => {
+      if (icon) icon.classList.remove("rotate");
+    }, 1500);
   };
 
   return (

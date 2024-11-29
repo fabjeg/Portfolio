@@ -74,7 +74,6 @@ body {
 .title-home:hover h1,
 .title-home:hover p {
   transform: translateY(-10px);
-  color: #4caf50;
 }
 .picture-home {
   width: 75%;
