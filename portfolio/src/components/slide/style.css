@@ -15,11 +15,9 @@
     position: relative;
     background-color: #fff;
     width: 80%; 
-    height: 80%; 
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    overflow: hidden; 
 }
 
 .carousel-img {
@@ -45,7 +43,7 @@
     color: grey;
     border: none;
     padding: 10px 20px;
-    font-size: 660%; 
+    font-size: 100px; 
     cursor: pointer;
     border-radius: 5px;
     display: flex;
@@ -70,3 +68,8 @@
 .close-btn:hover {
     background-color: #ff4c4c;
 }
+@media (max-width: 920px) {
+    .carousel-control {
+        font-size: 35px;
+    }
+  }

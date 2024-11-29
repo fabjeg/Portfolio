@@ -6,7 +6,7 @@ export function Slide({ images, currentIndex, onClose, setCurrentIndex }) {
     if (currentIndex < images.length - 1) {
       setCurrentIndex(currentIndex + 1);
     } else {
-      setCurrentIndex(0); 
+      setCurrentIndex(0);
     }
   };
 
@@ -14,20 +14,30 @@ export function Slide({ images, currentIndex, onClose, setCurrentIndex }) {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     } else {
-      setCurrentIndex(images.length - 1); 
+      setCurrentIndex(images.length - 1);
+    }
+  };
+
+  const handleOverlayClick = (e) => {
+    if (e.target.className === 'carousel-overlay') {
+      onClose();
     }
   };
 
   return (
-    <div className="carousel-overlay">
+    <div className="carousel-overlay" onClick={handleOverlayClick}>
       <div className="carousel-container">
         <button className="close-btn" onClick={onClose}>X</button>
         <div className="carousel-image">
           <img src={images[currentIndex]} alt="carousel" className="carousel-img" />
         </div>
         <div className="carousel-controls">
-          <button onClick={prevImage} className="carousel-control prev"><i className="fa-solid fa-chevron-left"></i></button>
-          <button onClick={nextImage} className="carousel-control next"><i className="fa-solid fa-chevron-right"></i></button>
+          <button onClick={prevImage} className="carousel-control prev">
+            <i className="fa-solid fa-chevron-left"></i>
+          </button>
+          <button onClick={nextImage} className="carousel-control next">
+            <i className="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
       </div>
     </div>

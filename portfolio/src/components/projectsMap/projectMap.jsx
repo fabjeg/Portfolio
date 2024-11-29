@@ -11,7 +11,6 @@ export function ProjectMap() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const openCarousel = (index) => {
-    // Vérification pour éviter les erreurs d'index
     if (index < picturesSlide.length && picturesSlide[index].img.length > 0) {
       setCurrentImages(picturesSlide[index].img);
       setCurrentImageIndex(0);
@@ -32,13 +31,13 @@ export function ProjectMap() {
           images={currentImages}
           currentIndex={currentImageIndex}
           onClose={closeCarousel}
-          setCurrentIndex={setCurrentImageIndex} // Passer la fonction de mise à jour de l'index
+          setCurrentIndex={setCurrentImageIndex} 
         />
       )}
       {portfolio.map((proj, index) => (
         <div key={index} className="project-title">
           <img
-            src={proj.image[0]} // Assurez-vous que `proj.image` est un tableau avec au moins une image
+            src={proj.image[0]} 
             alt={proj.name}
             className="project-pictures"
             onClick={() => openCarousel(index)}
