@@ -136,6 +136,7 @@ body {
   .button {
     width: 80px;
     height: 80px;
+    margin: 0px 26% -57% 0;
   }
 
   .fa-download {
@@ -146,6 +147,7 @@ body {
 
   .button-header {
     font-size: 16px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem ;
+    margin: 5px;
   }
 }

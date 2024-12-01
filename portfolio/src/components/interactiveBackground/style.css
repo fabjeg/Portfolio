@@ -124,3 +124,13 @@ body {
     transform: scale(1.1);
   }
 }
+@media (max-width: 768px) {
+  .triangle{
+    top: 44%;
+    right: 0%;
+  }
+  .square{
+    top: 22%;
+    left: 60%;
+  }
+}

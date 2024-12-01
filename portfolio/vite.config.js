@@ -5,8 +5,4 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: "/Portfolio/", // Configure le chemin de base pour GitHub Pages
-  build: {
-    outDir: "dist", // Dossier de sortie
-    assetsDir: "assets", // Dossier des ressources (CSS, JS)
-  },
 });
