@@ -36,7 +36,8 @@ body {
   padding: 0.5rem 1.5rem;
   background-color: #2c2d30;
   font-size: 20px;
-  color: white;
+  color: #f1f1f1; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
   border: none;
@@ -69,7 +70,7 @@ body {
 .cv p {
   color: white;
   font-family: "Poppins", Helvetica, Arial, sans-serif;
-  margin: 30% 0 0 0;
+  margin: 63% 0 0 0;
 }
 .button-cv p:hover {
   color: #e32207;
@@ -129,7 +130,7 @@ body {
 @media (max-width: 920px) {
   .section-header {
     width: 100%;
-    max-height: 80vh;
+    max-height: 60vh;
     margin-bottom: 20px;
   }
   .button {

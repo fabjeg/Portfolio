@@ -22,7 +22,7 @@ export function Header() {
         <div className="container-button">
           <div className="button-cv">
             <div className="button" onClick={handleDownload}>
-              <i className="fa-solid fa-download"></i>
+              <i className="fa-solid fa-download" ></i>
             </div>
             <div className="cv">
               <p>Mon CV</p>

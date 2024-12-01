@@ -30,14 +30,14 @@
   font-size: 27px;
   text-align: left;
   font-family: "Poppins", Helvetica, Arial, sans-serif;
-  margin: 5% 0 2% 11%;
+  margin: 5% 0 0 11%;
 }
 .contact-section h5 {
   color: white;
   font-size: 27px;
   text-align: left;
   font-family: "Poppins", Helvetica, Arial, sans-serif;
-  margin: 5% 0 2% 11%;
+  margin: 5% 0 0 11%;
 }
 .border-title-contact{
   position: relative;
@@ -56,7 +56,45 @@
   background: #f56c6d;
   width: 50%;
   border-radius: 3em;
-  margin-left: 27%;
+  margin-left: 26%;
+}
+.border-title-map{
+  position: relative;
+  z-index: 3;
+  box-shadow: inset 1.5px 1.5px 1.5px #202125, inset -1.5px -1.5px 1.5px #353535;
+  height: 0.5rem;
+  border-radius: 1em;
+  border: 0;
+  width: 20%;
+  margin: 10px 0 0 4%
+}
+.border-title-map:after{
+  position: absolute;
+  content: "";
+  height: 0.25rem;
+  background: #f56c6d;
+  width: 20%;
+  border-radius: 3em;
+  margin-left: 35%;
+}
+.border-title-form{
+  position: relative;
+  z-index: 3;
+  box-shadow: inset 1.5px 1.5px 1.5px #202125, inset -1.5px -1.5px 1.5px #353535;
+  height: 0.5rem;
+  border-radius: 1em;
+  border: 0;
+  width: 20%;
+  margin: 10px 0 0 5%
+}
+.border-title-form:after{
+  position: absolute;
+  content: "";
+  height: 0.25rem;
+  background: #f56c6d;
+  width: 50%;
+  border-radius: 3em;
+  margin-left: 31%;
 }
 @media (max-width: 920px) {
   .contactPage {
