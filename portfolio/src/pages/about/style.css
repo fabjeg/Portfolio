@@ -72,6 +72,7 @@ body {
     display: flex;
     flex-direction: column-reverse;
     overflow: scroll;
+    gap: 10px;
   }
   .aboutPage-section{
     width: 75%;

@@ -74,6 +74,7 @@
 @media (max-width: 920px) {
   .homePage {
     flex-direction: column-reverse;
+    gap: 10px;
   }
   .homePage-section {
     width: 90vw;

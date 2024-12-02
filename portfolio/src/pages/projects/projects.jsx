@@ -8,6 +8,7 @@ export function Projects() {
       <section className="project-section">
         <div className="title-project-page">
           <h2>Projets</h2>
+          <div className="border-title-project"></div>
           <ProjectMap/>
         </div>
       </section>

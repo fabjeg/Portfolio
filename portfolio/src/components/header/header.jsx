@@ -33,26 +33,31 @@ export function Header() {
         <div className="container-header-button">
           <button
             onClick={() => navigate("/")}
-            className="button-header fa-solid fa-house logo"
+            className="button-header  logo"
           >
+            <i className="fa-solid fa-house"></i>
             Home
+            
           </button>
           <button
             onClick={() => navigate("/about")}
-            className="button-header fa-solid fa-user logo"
+            className="button-header  logo"
           >
+            <i className="fa-solid fa-user"></i>
             À propos
           </button>
           <button
             onClick={() => navigate("/project")}
-            className="button-header fa-solid fa-diagram-project logo"
+            className="button-header  logo"
           >
+            <i className="fa-solid fa-diagram-project"></i>
             Projet
           </button>
           <button
             onClick={() => navigate("/contact")}
-            className="button-header fa-solid fa-address-card logo"
+            className="button-header logo"
           >
+            <i className="fa-solid fa-address-card"></i>
             Contact
           </button>
         </div>
