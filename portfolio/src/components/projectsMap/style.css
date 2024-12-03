@@ -1,102 +1,121 @@
 .project-title {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: inset 3px 3px 3px #202125, inset -3px -3px 3px #353535;
-    font-family: "Poppins", Helvetica, Arial, sans-serif;
-    margin-top: 20px;
-    margin-inline: 2%;
-  }
-  .project-pictures {
-    width: 50%;
-    height: auto;
-    border-radius: 50px;
-    object-fit: cover;
-    cursor: pointer;
-    border-radius: 1rem;
-    border: 7px solid #353535;
-  }
-  .project-content {
-    display: flex;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: inset 3px 3px 3px #202125, inset -3px -3px 3px #353535;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  margin-top: 20px;
+  margin-inline: 2%;
+}
+
+.project-pictures {
+  width: 50%;
+  height: auto;
+  border-radius: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  position: relative;
+  border-radius: 1rem;
+  border: 7px solid #353535;
+  transition: transform 0.3s ease; /* Ajout de la transition */
+}
+
+.project-pictures:hover {
+  transform: scale(1.05); /* Agrandir légèrement l'image au survol */
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.border-title-project {
+  position: relative;
+  box-shadow: inset 1.5px 1.5px 1.5px #202125, inset -1.5px -1.5px 1.5px #353535;
+  height: 0.5rem;
+  border-radius: 1em;
+  border: 0;
+  width: 17%;
+  margin-bottom: 2%;
+  margin-left: 41%;
+}
+
+.border-title-project::after {
+  position: absolute;
+  content: "";
+  height: 0.25rem;
+  background: #f56c6d;
+  width: 73%;
+  border-radius: 3em;
+  margin-left: -37%;
+}
+
+.project-competences {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  margin-top: 5%;
+}
+
+.project-content font {
+  color: #d3d3d3;
+  font-size: 25px;
+  line-height: 1.5;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+}
+
+.project-content h3 {
+  font-size: 28px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.font-competence {
+  color: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 3%;
+  font-size: 15px;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+}
+
+.span-link {
+  margin-top: 10%;
+  border: 3px solid red;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.icon-link {
+  color: #fff;
+  font-size: 3rem;
+  transition: color 0.3s;
+}
+
+.icon-link:hover {
+  color: #4caf50;
+}
+
+@media (max-width: 920px) {
+  .project-title {
     flex-direction: column;
-    justify-content: space-around;
-  }
-  .border-title-project{
-    position: relative;
-    box-shadow: inset 1.5px 1.5px 1.5px #202125, inset -1.5px -1.5px 1.5px #353535;
-    height: 0.5rem;
-    border-radius: 1em;
-    border: 0;
-    width: 17%;
-    margin-bottom: 2%;
-    margin-left: 41%;
-  }
-  .border-title-project:after{
-    position: absolute;
-    content: "";
-    height: 0.25rem;
-    background: #f56c6d;
-    width: 73%;
-    border-radius: 3em;
-    margin-left: -37%;
-  }
-  .project-competences {
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-    margin-top: 5%;
-  }
-  .project-content font {
-    color: #d3d3d3;
-    font-size: 25px;
-    line-height: 1.5;
-    font-family: "Poppins", Helvetica, Arial, sans-serif;
-  }
-  .project-content h3 {
-    font-size: 28px;
-    color: #ffffff;
-    margin: 0;
   }
   .font-competence {
-    color: white;
-    border: 1px solid black;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 3%;
-    font-size: 15px;
+    font-size: 11px;
   }
-  .link {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 50%;
-  }
-  .span-link {
-    margin-top: 10%;
-    border: 3px solid red;
-  }
-  .link {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  .icon-link {
-    color: #fff;
-    font-size: 3rem;
-    transition: color 0.3s;
-  
-  }
-  .icon-link:hover {
-    color: #4caf50; 
-  }
-  @media (max-width: 920px) {
-    .project-title{
-      flex-direction: column;
-    }
-    .font-competence{
-      font-size: 11px;
-    }
-  }
+}

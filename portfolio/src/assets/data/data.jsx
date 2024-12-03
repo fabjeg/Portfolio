@@ -34,7 +34,7 @@ const portfolio = [
     image: [Sophiebluel],
     text: "Chez ArchiWebos, j'ai contribué à la conception du site portfolio de Sophie Bluel, architecte d'intérieur. Mon rôle en tant que développeur front-end a impliqué la création de la page de présentation, de la page de connexion de l'administrateur, et d'une modale d'upload de médias. ",
     code: "https://github.com/fabjeg/Portfolio-architecte-sophie-bluel-p6",
-    site: "",
+    site: "https://portfolio.fabwebprojects.fr/projetformation/Sophie-bluel/",
     competences: ["HTML", "CSS", "Javascript", "Swagger"],
   },
   {
@@ -52,7 +52,7 @@ const portfolio = [
     image: [events],
     text: "En tant que développeur front-end freelance, j'ai été sollicité par l'agence événementielle 724events pour résoudre des problèmes de bugs et finaliser leur site web vitrine. Le projet avait été initialement démarré par un autre développeur. J'ai repris le travail en corrigeant les bugs, et en complétant le cahier de recette pour assurer un fonctionnement sans faille.",
     code: "https://github.com/fabjeg/724events",
-    site: "",
+    site: "https://724events-ac.vercel.app/",
     competences: ["React Dev Tools", "Débogage"],
   },
   {
@@ -66,12 +66,12 @@ const portfolio = [
   },
   {
     id: "b4c67936",
-    name: "Argent Bank",
+    name: "Argent Bank Redux Toolkit",
     image: [Argentbank],
     text: "En tant que développeur front-end chez Argent Bank, j'ai travaillé sur la création du tableau de bord des utilisateurs. La première phase impliquait de créer une application web réactive avec React, en utilisant Redux pour la gestion de l'état. Dans la phase 2, j'ai travaillé sur la conception des transactions et j'ai fourni des spécifications Swagger pour les routes API associées.",
     code: "https://github.com/fabjeg/ArgentBank",
     site: "https://fabjeg.github.io/ArgentBank-Redux/",
-    competences: ["React", "Redux", "MongoDB"],
+    competences: ["React", "Redux Toolkit", "MongoDB"],
   },
   {
     id: "b4c67937",
