@@ -16,6 +16,13 @@ import omf3 from "../images/projects/slide/ohMyFood/ohmyfood(3).png";
 import booki from "../images/projects/slide/booki/booki.png";
 import booki2 from "../images/projects/slide/booki/booki(2).png";
 import booki3 from "../images/projects/slide/booki/booki(3).png";
+import sophieB from '../images/projects/slide/sophieBluel/SophieBluel.png'
+import sophieB5 from '../images/projects/slide/sophieBluel/SophieBluel(5).png'
+import sophieB3 from '../images/projects/slide/sophieBluel/SophieBluel(3).png'
+import sophieB2 from '../images/projects/slide/sophieBluel/SophieBluel(2).png'
+import sophieB4 from '../images/projects/slide/sophieBluel/SophieBluel(4).png'
+import argenB from "../images/projects/slide/argentBank/argentBank.png"
+import argenB1 from "../images/projects/slide/argentBank/argentBank(1).png"
 
 const picturesSlide = [
   {
@@ -28,7 +35,7 @@ const picturesSlide = [
   },
   {
     name: "Portfolio architecte",
-    img: [],
+    img: [sophieB3, sophieB5, sophieB4, sophieB, sophieB2],
   },
   {
     name: "Kasa",
@@ -44,7 +51,7 @@ const picturesSlide = [
   },
   {
     name: "Argent Bank",
-    img: [],
+    img: [argenB1, argenB],
   },
   {
     name: "Argent Bank Redux",
