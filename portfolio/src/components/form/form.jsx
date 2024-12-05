@@ -1,21 +1,18 @@
 import { useForm } from "react-hook-form";
 import './style.css';
 import emailjs from 'emailjs-com';
-
+import { ThemeContext } from "../../index";
+import { useContext } from "react";
 
 export function Form() {
-
+  const { theme } = useContext(ThemeContext);
   const {
     register,
-    // handleSubmit,
     formState: { errors },
   } = useForm();
 
-  // const onSubmit = (data) => console.log(data);
-
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log("===>", e.target);
     
     emailjs.sendForm('service_zlwfo2c', 'template_jqfm4xp', e.target, '8Xw1Qhsh1n-FKPfu5')
         .then((result) => {
@@ -24,15 +21,15 @@ export function Form() {
         .catch((error) => {
             console.error('Error sending email:', error);
         });
-};
+  };
 
   return (
-    <div className="form">
+    <div className={`form ${theme}`}>
       <form onSubmit={sendEmail}>
         <div className="form-group">
           <div className="form-control">
             <input
-              className={`input-form ${errors.Name ? "input-error" : ""}`}
+              className={`input-form ${errors.Name ? "input-error" : ""} ${theme}`}
               {...register("Name", { required: "Le nom est requis." })}
               placeholder="nom"
               name="to_name"
@@ -41,7 +38,7 @@ export function Form() {
           </div>
           <div className="form-control">
             <input
-              className={`input-form ${errors.Email ? "input-error" : ""}`}
+              className={`input-form ${errors.Email ? "input-error" : ""} ${theme}`}
               {...register("Email", {
                 required: "L'email est requis.",
                 pattern: {
@@ -57,7 +54,7 @@ export function Form() {
         <div className="form-group">
           <div className="form-control">
             <input
-              className={`input-form ${errors.Entreprise ? "input-error" : ""}`}
+              className={`input-form ${errors.Entreprise ? "input-error" : ""} ${theme}`}
               {...register("Entreprise", { required: "Le nom de l'entreprise est requis." })}
               placeholder="Entreprise"
             />
@@ -67,7 +64,7 @@ export function Form() {
           </div>
           <div className="form-control">
             <input
-              className={`input-form ${errors.Sujet ? "input-error" : ""}`}
+              className={`input-form ${errors.Sujet ? "input-error" : ""} ${theme}`}
               {...register("Sujet", { required: "Le sujet est requis." })}
               placeholder="Sujet"
             />
@@ -76,14 +73,16 @@ export function Form() {
         </div>
         <div className="form-control">
           <textarea
-            className={`textarea-form ${errors.Message ? "input-error" : ""}`}
+            className={`textarea-form ${errors.Message ? "input-error" : ""} ${theme}`}
             {...register("Message", { required: "Le message est requis." })}
             placeholder="Votre message"
             name="message"
           />
           {errors.Message && <p className="error-message">{errors.Message.message}</p>}
         </div>
-        <button type="submit" value="Envoyer" className="submit-button"/>
+        <button type="submit" value="Envoyer" className="submit-button">
+          Envoyer
+        </button>
       </form>
     </div>
   );

@@ -1,14 +1,13 @@
 .container-Story {
   display: flex;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin: 2% 2% 2% 4%;
+    gap: 8%;
 }
 .content-p {
   text-align: left;
-  color: white;
+  color: inherit;
   font-size: 20px;
-  margin: 20px 0 0 2rem;
-  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-family:  "Frank Ruhl Libre", serif;
 }
 @media (max-width: 920px) {
   .container-Story {

@@ -1,7 +1,7 @@
 .title-competence {
   text-align: center;
   font-size: 25px;
-  color: white;
+  color: inherit;
   font-family: "Poppins", Helvetica, Arial, sans-serif;
   }
   .title-competence h3 {
@@ -16,6 +16,12 @@
     box-shadow: inset 3px 3px 3px #202125, inset -3px -3px 3px #353535;
     margin: 20px 2% 2% 3%;
     padding: 1%;
+    border-radius: 1rem;
+  }
+  .container-icons.light{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
   .icon-wrapper {
     position: relative;
@@ -23,12 +29,17 @@
     margin: 10px;
   }
   .icon-image {
-    border-radius: 25px;
+    border-radius: 1rem;
     border: 7px solid #353535;
     width: 100px;
     transition: filter 0.3s ease;
     box-shadow: 3px 3px 3px #202125, -3px -3px 3px #353535;
-
+  }
+  .icon-image.light{
+    border: 2px solid #353535;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
   .icon-image:hover {
     filter: grayscale(100%);
@@ -48,10 +59,14 @@
     opacity: 0;
     overflow: hidden;
     transition: opacity 0.3s ease;
-    border-radius: 25px;
-    
+    border-radius: 1rem;
   }
+
   .icon-wrapper:hover .icon-content {
     opacity: 1;
   }
-  
+  .border-title.light{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }

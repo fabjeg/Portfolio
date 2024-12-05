@@ -11,6 +11,8 @@ import { Form } from "../components/form/form";
 import { Map } from "../components/map/map";
 import {ProjectMap} from "../components/projectsMap/projectMap"
 import { Slide } from "../components/slide/slide";
+import { ButtonLight } from "../components/buttonLight/buttonLight";
+import { ThemeContext } from "../components/themeContext/themeContext";
 
 export {
   HomePage,
@@ -25,5 +27,7 @@ export {
   Form,
   Map,
   ProjectMap,
-  Slide
+  Slide,
+  ButtonLight,
+  ThemeContext
 };

@@ -14,12 +14,15 @@
   border-radius: 50px;
   width: 75%;
   height: 80vh;
-  background-color: #2c2d30;
   box-shadow: 3px 3px 3px #202125, -3px -3px 3px #353535;
   overflow-y: auto;
   background-image: url("../../assets/images/pictures-home/pictures_home.jpg");
   background-size: cover;
   background-position: center;
+}
+.homePage-section.light{
+  background-image: url("../../assets/images/pictures-home/pictures_home_light.jpg");
+  box-shadow: 2px 4px 12px #00000014;
 }
 .title-home {
   color: white;

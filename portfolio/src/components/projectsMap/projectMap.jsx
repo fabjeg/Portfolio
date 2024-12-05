@@ -4,8 +4,11 @@ import portfolio from "../../assets/data/data";
 import picturesSlide from "../../assets/data/dataSlide";
 import { Slide } from "../slide/slide";
 import "./style.css";
+import { ThemeContext } from "../../index";
+import { useContext } from "react";
 
 export function ProjectMap() {
+  const { theme } = useContext(ThemeContext);
   const [showCarousel, setShowCarousel] = useState(false);
   const [currentImages, setCurrentImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -35,7 +38,7 @@ export function ProjectMap() {
         />
       )}
       {portfolio.map((proj, index) => (
-        <div key={index} className="project-title">
+        <div key={index} className={`project-title ${theme}`}>
           <img
             src={proj.image[0]} 
             alt={proj.name}
@@ -45,13 +48,13 @@ export function ProjectMap() {
           <div className="project-content">
             <div>
               <h3>{proj.name}</h3>
-              <div className="border-title-project"></div>
+              <div className={`border-title-project ${theme}`}></div>
             </div>
             <font>{proj.text}</font>
             <div className="project-competences">
               {(Array.isArray(proj.competences) ? proj.competences : []).map(
                 (lang, langIndex) => (
-                  <span key={langIndex} className="font-competence">
+                  <span key={langIndex} className={`font-competence ${theme}`}>
                     {lang}
                   </span>
                 )

@@ -6,8 +6,12 @@
   padding: 1rem;
   box-shadow: inset 3px 3px 3px #202125, inset -3px -3px 3px #353535;
   font-family: "Poppins", Helvetica, Arial, sans-serif;
-  margin-top: 20px;
-  margin-inline: 2%;
+  margin: 20px 2% 4% 2%;
+}
+.project-title.light{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .project-pictures {
@@ -19,11 +23,11 @@
   position: relative;
   border-radius: 1rem;
   border: 7px solid #353535;
-  transition: transform 0.3s ease; /* Ajout de la transition */
+  transition: transform 0.3s ease;
 }
 
 .project-pictures:hover {
-  transform: scale(1.05); /* Agrandir légèrement l'image au survol */
+  transform: scale(1.05); 
 }
 
 .project-content {
@@ -41,6 +45,11 @@
   width: 17%;
   margin-bottom: 2%;
   margin-left: 41%;
+}
+.border-title-project.light{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .border-title-project::after {
@@ -61,7 +70,7 @@
 }
 
 .project-content font {
-  color: #d3d3d3;
+  color: inherit;
   font-size: 25px;
   line-height: 1.5;
   font-family: "Poppins", Helvetica, Arial, sans-serif;
@@ -69,17 +78,23 @@
 
 .project-content h3 {
   font-size: 28px;
-  color: #ffffff;
+  color: inherit;
   margin: 0;
 }
 
 .font-competence {
-  color: white;
+  color: inherit;
   border: 1px solid black;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   padding: 3%;
   font-size: 15px;
+}
+.font-competence.light{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border: none;
 }
 
 .link {
@@ -102,7 +117,7 @@
 }
 
 .icon-link {
-  color: #fff;
+  color: inherit;
   font-size: 3rem;
   transition: color 0.3s;
 }

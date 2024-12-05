@@ -18,10 +18,16 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+.project-section.light{
+  background-color: #fdfefe;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
 .title-project-page {
   text-align: center;
   font-size: 25px;
-  color: white;
+  color: inherit;
   font-family: "Poppins", Helvetica, Arial, sans-serif;
 }
 .title-project-page h2{
@@ -30,6 +36,11 @@
 
 .project-competences span:hover {
   background-color: rgba(0, 0, 0, 0.7);
+}
+.border-title-project.light{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 @media (max-width: 920px) {
   .projectPage{

@@ -10,8 +10,13 @@ import github from "../../assets/images/icons/github.png"
 import mongodb from "../../assets/images/icons/mongodb.png"
 import figma from "../../assets/images/icons/figma.png"
 import "./style.css";
+import { ThemeContext } from "../../index";
+import { useContext } from "react";
 
 export function Competence() {
+
+    const { theme } = useContext(ThemeContext);
+
     const skills = [
         { src: html, alt: "HTML", text: "HTML5" },
         { src: css, alt: "CSS", text: "CSS3" },
@@ -28,14 +33,14 @@ export function Competence() {
     ];
 
     return (
-        <div className='title-competence'>
+        <div className={`title-competence ${theme}`}>
             <h3>Compétences</h3>
-            <div className="border-title"></div>
+            <div className={`border-title ${theme}`}></div>
             <div className="container">
-                <div className='container-icons'>
+                <div className={`container-icons ${theme}`}>
                     {skills.map((skill, index) => (
                         <div key={index} className='icon-wrapper'>
-                            <img src={skill.src} alt={skill.alt} className="icon-image" />
+                            <img src={skill.src} alt={skill.alt} className={`icon-image ${theme}`} />
                             <div className='icon-content'>{skill.text}</div>
                         </div>
                     ))}

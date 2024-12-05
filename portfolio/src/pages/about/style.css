@@ -2,23 +2,13 @@ body {
   margin: 0;
   padding: 0;
   overflow: auto;
-  background-color: #1c1c1c; 
+  background-color: #1c1c1c;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
-.header-about {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background-color: #2c2d30;
-  border-radius: 50px;
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .aboutPage {
   display: flex;
   justify-content: center;
@@ -30,11 +20,20 @@ body {
   border-radius: 50px;
   width: 75%;
   height: 80vh;
-  background-color: #2c2d30;
   box-shadow: 3px 3px 3px #202125, -3px -3px 3px #353535;
   overflow-y: auto;
-  scrollbar-width: none; 
-  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.aboutPage-section.light {
+  background-color: #fdfefe;
+  color: black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.aboutPage-section.dark {
+  background-color: #2c2d30;
+  color: white;
 }
 .aboutPage-section::-webkit-scrollbar {
   width: 10px;
@@ -42,20 +41,25 @@ body {
 .titleAbout {
   text-align: center;
   font-size: 25px;
-  color: white;
-  margin-top: 20px; 
+  color: inherit;
+  margin-top: 20px;
   font-family: "Poppins", Helvetica, Arial, sans-serif;
 }
-.border-title{
+.border-title {
   position: relative;
   box-shadow: inset 1.5px 1.5px 1.5px #202125, inset -1.5px -1.5px 1.5px #353535;
   height: 0.5rem;
   border-radius: 1em;
   border: 0;
   width: 20%;
-  margin: 10px 0 0 40%
+  margin: 10px 0 0 40%;
 }
-.border-title:after{
+.border-title.light{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.border-title:after {
   position: absolute;
   content: "";
   height: 0.25rem;
@@ -64,17 +68,17 @@ body {
   border-radius: 3em;
   margin-left: -18%;
 }
-.titleAbout h1{
+.titleAbout h1 {
   margin: 0;
 }
-@media (max-width: 920px) {
+@media (max-width: 950px) {
   .aboutPage {
     display: flex;
     flex-direction: column-reverse;
     overflow: scroll;
     gap: 10px;
   }
-  .aboutPage-section{
+  .aboutPage-section {
     width: 75%;
   }
 }
