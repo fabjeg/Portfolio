@@ -1,5 +1,6 @@
 import "./style.css";
 import { useNavigate } from "react-router-dom";
+import { saveAs } from "file-saver";
 import { ThemeContext } from "../themeContext/themeContext";
 import { useContext } from "react";
 import { ButtonLight } from "../buttonLight/buttonLight";
@@ -8,19 +9,24 @@ export function Header() {
   const navigate = useNavigate();
   const { theme } = useContext(ThemeContext);
 
+  const handleDownload = () => {
+    const icon = document.querySelector(".fa-download");
+    if (icon) {
+      icon.classList.add("rotate");
+    }
+    saveAs("/src/assets/data/CV.pdf", "CV.pdf");
+    setTimeout(() => {
+      if (icon) icon.classList.remove("rotate");
+    }, 1500);
+  };
+
   return (
     <div>
       <div className={`section-header ${theme}`}>
         <div className="container-button">
           <div className="button-cv">
-            <div className={`button ${theme}`}>
-              <a
-               href={`${import.meta.env.BASE_URL}/assets/data/CV.pdf`}
-                target="_blank"
-                rel="noopener noreferrer" 
-              >
-                <i className={`fa-solid fa-download ${theme}`}></i>
-              </a>
+            <div className={`button ${theme}`} onClick={handleDownload}>
+              <i className={`fa-solid fa-download ${theme}`} ></i>
             </div>
             <div className={`cv ${theme}`}>
               <p>Mon CV</p>
