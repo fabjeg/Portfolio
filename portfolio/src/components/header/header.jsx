@@ -14,9 +14,13 @@ export function Header() {
         <div className="container-button">
           <div className="button-cv">
             <div className={`button ${theme}`}>
-              {/* <a href="/CV/C_V_Fabien_JEGO.jpg" download="C_V_Fabien_JEGO.jpg"> */}
+              <a
+               href={`${import.meta.env.BASE_URL}/assets/data/CV.pdf`}
+                target="_blank"
+                rel="noopener noreferrer" 
+              >
                 <i className={`fa-solid fa-download ${theme}`}></i>
-              {/* </a> */}
+              </a>
             </div>
             <div className={`cv ${theme}`}>
               <p>Mon CV</p>
@@ -24,18 +28,30 @@ export function Header() {
             </div>
           </div>
         </div>
-            <ButtonLight/>
+        <ButtonLight />
         <div className="container-header-button">
-          <button onClick={() => navigate("/")} className={`button-header logo ${theme}`}>
+          <button
+            onClick={() => navigate("/")}
+            className={`button-header logo ${theme}`}
+          >
             <i className={`fa-solid fa-house`}></i> Home
           </button>
-          <button onClick={() => navigate("/about")} className={`button-header logo ${theme}`}>
+          <button
+            onClick={() => navigate("/about")}
+            className={`button-header logo ${theme}`}
+          >
             <i className={`fa-solid fa-user`}></i> À propos
           </button>
-          <button onClick={() => navigate("/project")} className={`button-header logo ${theme}`}>
+          <button
+            onClick={() => navigate("/project")}
+            className={`button-header logo ${theme}`}
+          >
             <i className={`fa-solid fa-diagram-project`}></i> Projet
           </button>
-          <button onClick={() => navigate("/contact")} className={`button-header logo ${theme}`}>
+          <button
+            onClick={() => navigate("/contact")}
+            className={`button-header logo ${theme}`}
+          >
             <i className={`fa-solid fa-address-card`}></i> Contact
           </button>
         </div>

@@ -1,89 +1,161 @@
 import { useForm } from "react-hook-form";
-import './style.css';
-import emailjs from 'emailjs-com';
+import "./style.css";
+import emailjs from "emailjs-com";
 import { ThemeContext } from "../../index";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { ConfirmationModal } from "../../index";
 
 export function Form() {
   const { theme } = useContext(ThemeContext);
   const {
     register,
-    formState: { errors },
-  } = useForm();
+    handleSubmit,
+    formState: { errors, isValid },
+    reset,
+  } = useForm({ mode: "onTouched" }); // Activation de la validation dès que le champ est touché
+  const [message, setMessage] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    
-    emailjs.sendForm('service_zlwfo2c', 'template_jqfm4xp', e.target, '8Xw1Qhsh1n-FKPfu5')
-        .then((result) => {
-            console.log('Email sent:', result.text);
-        })
-        .catch((error) => {
-            console.error('Error sending email:', error);
-        });
+  const sendEmail = (data) => {
+    console.log("Data submitted:", data); // Debug pour vérifier les valeurs
+    emailjs
+      .send(
+        "service_zlwfo2c",
+        "template_jqfm4xp",
+        {
+          to_name: data.to_name,
+          from_email: data.from_email,
+          entreprise: data.entreprise,
+          sujet: data.sujet,
+          message: data.message,
+        },
+        "8Xw1Qhsh1n-FKPfu5"
+      )
+      .then((result) => {
+        console.log("Email sent:", result.text);
+        setMessage("Votre message a bien été envoyé !");
+        setIsModalOpen(true);
+        reset(); // Réinitialise les champs après l'envoi
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        setMessage("Une erreur est survenue lors de l'envoi de votre message.");
+        setIsModalOpen(true);
+      });
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
     <div className={`form ${theme}`}>
-      <form onSubmit={sendEmail}>
+      <form onSubmit={handleSubmit(sendEmail)}>
+        {/* Message global d'erreur */}
+        {Object.keys(errors).length > 0 && (
+          <p className="global-error">
+            Veuillez corriger les erreurs ci-dessous avant de soumettre le
+            formulaire.
+          </p>
+        )}
+
         <div className="form-group">
           <div className="form-control">
+            <label htmlFor="to_name">Nom</label>
             <input
-              className={`input-form ${errors.Name ? "input-error" : ""} ${theme}`}
-              {...register("Name", { required: "Le nom est requis." })}
-              placeholder="nom"
-              name="to_name"
+              id="to_name"
+              className={`input-form ${
+                errors.to_name ? "input-error" : ""
+              } ${theme}`}
+              {...register("to_name", { required: "Le nom est requis." })}
+              placeholder="Entrez votre nom"
+              name="from_name"
             />
-            {errors.Name && <p className="error-message">{errors.Name.message}</p>}
+            {errors.to_name && (
+              <p className="error-message">{errors.to_name.message}</p>
+            )}
           </div>
           <div className="form-control">
+            <label htmlFor="from_email">Email</label>
             <input
-              className={`input-form ${errors.Email ? "input-error" : ""} ${theme}`}
-              {...register("Email", {
+              id="from_email"
+              className={`input-form ${
+                errors.from_email ? "input-error" : ""
+              } ${theme}`}
+              {...register("from_email", {
                 required: "L'email est requis.",
                 pattern: {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                   message: "Adresse email invalide.",
                 },
               })}
-              placeholder="Email"
+              placeholder="Entrez votre email"
             />
-            {errors.Email && <p className="error-message">{errors.Email.message}</p>}
+            {errors.from_email && (
+              <p className="error-message">{errors.from_email.message}</p>
+            )}
           </div>
         </div>
+
         <div className="form-group">
           <div className="form-control">
+            <label htmlFor="entreprise">Entreprise</label>
             <input
-              className={`input-form ${errors.Entreprise ? "input-error" : ""} ${theme}`}
-              {...register("Entreprise", { required: "Le nom de l'entreprise est requis." })}
-              placeholder="Entreprise"
+              id="entreprise"
+              className={`input-form ${
+                errors.entreprise ? "input-error" : ""
+              } ${theme}`}
+              {...register("entreprise", {
+                required: "Le nom de l'entreprise est requis.",
+              })}
+              placeholder="Entrez le nom de l'entreprise"
             />
-            {errors.Entreprise && (
-              <p className="error-message">{errors.Entreprise.message}</p>
+            {errors.entreprise && (
+              <p className="error-message">{errors.entreprise.message}</p>
             )}
           </div>
           <div className="form-control">
+            <label htmlFor="sujet">Sujet</label>
             <input
-              className={`input-form ${errors.Sujet ? "input-error" : ""} ${theme}`}
-              {...register("Sujet", { required: "Le sujet est requis." })}
-              placeholder="Sujet"
+              id="sujet"
+              className={`input-form ${
+                errors.sujet ? "input-error" : ""
+              } ${theme}`}
+              {...register("sujet", { required: "Le sujet est requis." })}
+              placeholder="Entrez le sujet"
             />
-            {errors.Sujet && <p className="error-message">{errors.Sujet.message}</p>}
+            {errors.sujet && (
+              <p className="error-message">{errors.sujet.message}</p>
+            )}
           </div>
         </div>
+
         <div className="form-control">
+          <label htmlFor="message">Message</label>
           <textarea
-            className={`textarea-form ${errors.Message ? "input-error" : ""} ${theme}`}
-            {...register("Message", { required: "Le message est requis." })}
-            placeholder="Votre message"
-            name="message"
+            id="message"
+            className={`textarea-form ${
+              errors.message ? "input-error" : ""
+            } ${theme}`}
+            {...register("message", { required: "Le message est requis." })}
+            placeholder="Entrez votre message"
           />
-          {errors.Message && <p className="error-message">{errors.Message.message}</p>}
+          {errors.message && (
+            <p className="error-message">{errors.message.message}</p>
+          )}
         </div>
-        <button type="submit" value="Envoyer" className="submit-button">
+
+        <button
+          type="submit"
+          className="submit-button"
+          disabled={!isValid} // Désactivation du bouton si le formulaire n'est pas valide
+        >
           Envoyer
         </button>
       </form>
+      {isModalOpen && (
+        <ConfirmationModal message={message} onClose={closeModal} />
+      )}
     </div>
   );
 }

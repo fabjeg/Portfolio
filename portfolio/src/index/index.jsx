@@ -13,6 +13,7 @@ import {ProjectMap} from "../components/projectsMap/projectMap"
 import { Slide } from "../components/slide/slide";
 import { ButtonLight } from "../components/buttonLight/buttonLight";
 import { ThemeContext } from "../components/themeContext/themeContext";
+import { ConfirmationModal } from "../components/modalForm/modalForm";
 
 export {
   HomePage,
@@ -29,5 +30,6 @@ export {
   ProjectMap,
   Slide,
   ButtonLight,
-  ThemeContext
+  ThemeContext,
+  ConfirmationModal,
 };
