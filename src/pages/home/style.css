@@ -74,7 +74,7 @@
 .picture-home {
   width: 75%;
 }
-@media (max-width: 920px) {
+@media (max-width: 950px) {
   .homePage {
     flex-direction: column-reverse;
     gap: 10px;
