@@ -14,7 +14,7 @@ export function Header() {
     if (icon) {
       icon.classList.add("rotate");
     }
-    saveAs("/src/assets/data/CV.pdf", "CV.pdf");
+    saveAs("/public/CV.pdf", "CV.pdf");
     setTimeout(() => {
       if (icon) icon.classList.remove("rotate");
     }, 1500);
