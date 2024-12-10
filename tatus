@@ -1,0 +1,38 @@
+[33mddaf4f9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mrestore-to-ddaf4f9[m[33m)[m Update CSS styles
+[33mef75baf[m refactoring form
+[33mcb945db[m Correction du téléchargement du CV
+[33mc682d39[m Déplacement du fichier CV dans le dossier public pour corriger le téléchargement
+[33ma9d27b4[m refactoring themeProvider
+[33m0dfc8f0[m Mise à jour de mon portfolio
+[33m2600fb6[m add cv
+[33m0f4bf5f[m deploy
+[33mbc11fd3[m Recreate package-lock.json after cleaning dependencies
+[33m9b96f10[m[33m ([m[1;32mrestore-branch[m[33m)[m Réorganisation des fichiers
+[33m6e8c855[m remove unnecessary files
+[33m2957102[m deploy
+[33m9750013[m deploy
+[33m20151cd[m deploy
+[33md82b83b[m deploy vercel
+[33m3b3b2df[m add mode light
+[33m03fe741[m Removed node_modules folder
+[33mc545e5d[m implement emailjs
+[33m683bcf3[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m refactoring code
+[33m387860b[m add pictures
+[33m1dca76a[m header modification
+[33mf566efe[m refactoring
+[33m86072c9[m deploy
+[33m2ff7008[m deploy config
+[33mcbdc517[m add pictures slide
+[33mf971b2a[m add slide
+[33m6000685[m add formulaire
+[33m8870f7c[m home page improvement
+[33mb836cbf[m add style
+[33m7baadf8[m add deploy
+[33m1ca370a[m css adjustment
+[33mbd85364[m conflict resolution
+[33m5fc2d4a[m deploy
+[33mfa3d38b[m modified package.json
+[33m70fd432[m add media
+[33mbfc99c6[m refactoring code
+[33m92171db[m refont
+[33m9735bbd[m first commit
