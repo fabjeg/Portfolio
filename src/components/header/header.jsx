@@ -14,7 +14,7 @@ export function Header() {
     if (icon) {
       icon.classList.add("rotate");
     }
-    saveAs("https://portfolio-j4ugwif4m-fabiens-projects-3e207d58.vercel.app/CV.pdf", "CV.pdf");
+    saveAs("../../../public/CV.pdf", "CV.pdf");
     setTimeout(() => {
       if (icon) icon.classList.remove("rotate");
     }, 1500);
