@@ -1,9 +1,9 @@
 import "./style.css";
 import { useNavigate } from "react-router-dom";
-import { saveAs } from "file-saver";
 import { ThemeContext } from "../themeContext/themeContext";
 import { useContext } from "react";
 import { ButtonLight } from "../buttonLight/buttonLight";
+import ResumePDF from "./../../assets/CV.pdf";
 
 export function Header() {
   const navigate = useNavigate();
@@ -14,10 +14,7 @@ export function Header() {
     if (icon) {
       icon.classList.add("rotate");
     }
-    saveAs("../../../public/CV.pdf", "CV.pdf");
-    setTimeout(() => {
-      if (icon) icon.classList.remove("rotate");
-    }, 1500);
+    window.open(ResumePDF);
   };
 
   return (
@@ -26,7 +23,7 @@ export function Header() {
         <div className="container-button">
           <div className="button-cv">
             <div className={`button ${theme}`} onClick={handleDownload}>
-              <i className={`fa-solid fa-download ${theme}`} ></i>
+              <i className={`fa-solid fa-download ${theme}`}></i>
             </div>
             <div className={`cv ${theme}`}>
               <p>Mon CV</p>
