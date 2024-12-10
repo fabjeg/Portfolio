@@ -49,12 +49,16 @@ tr:not(:last-child) td {
   .info-box{
     width: 74%;
   }
-  .info-label{
-    font-size: 15px;
-    overflow-wrap: break-word;
-  }
   .info-value {
     font-size: 14px;
     overflow-wrap: break-word;
+  }
+}
+@media (max-width: 516px) {
+  .info-label{
+    display: none;
+  }
+  .info-value{
+    text-align: center;
   }
 }

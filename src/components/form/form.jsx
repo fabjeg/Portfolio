@@ -13,7 +13,7 @@ export function Form() {
     formState: { errors, isValid },
     reset,
   } = useForm({ mode: "onTouched" });
-  
+
   const [message, setMessage] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -52,7 +52,9 @@ export function Form() {
     <div className={`form ${theme}`}>
       <form onSubmit={handleSubmit(sendEmail)}>
         {isModalOpen && (
-          <p className="global-error">Veuillez remplir correctement tous les champs requis.</p>
+          <p className="global-error">
+            Veuillez remplir correctement tous les champs requis.
+          </p>
         )}
 
         <div className="form-group">
@@ -60,7 +62,9 @@ export function Form() {
             <label htmlFor="from_name">Nom</label>
             <input
               id="from_name"
-              className={`input-form ${errors.from_name ? "input-error" : ""}`}
+              className={`input-form ${
+                errors.from_name ? "input-error" : ""
+              } ${theme}`}
               {...register("from_name", { required: "Le nom est requis." })}
               placeholder="Entrez votre nom"
             />
@@ -72,7 +76,9 @@ export function Form() {
             <label htmlFor="from_email">Email</label>
             <input
               id="from_email"
-              className={`input-form ${errors.from_email ? "input-error" : ""}`}
+              className={`input-form ${
+                errors.from_email ? "input-error" : ""
+              } ${theme}`}
               {...register("from_email", {
                 required: "L'email est requis.",
                 pattern: {
@@ -93,8 +99,12 @@ export function Form() {
             <label htmlFor="entreprise">Entreprise</label>
             <input
               id="entreprise"
-              className={`input-form ${errors.entreprise ? "input-error" : ""}`}
-              {...register("entreprise", { required: "Le nom de l'entreprise est requis." })}
+              className={`input-form ${
+                errors.entreprise ? "input-error" : ""
+              } ${theme}`}
+              {...register("entreprise", {
+                required: "Le nom de l'entreprise est requis.",
+              })}
               placeholder="Entrez le nom de l'entreprise"
             />
             {errors.entreprise && (
@@ -105,7 +115,9 @@ export function Form() {
             <label htmlFor="sujet">Sujet</label>
             <input
               id="sujet"
-              className={`input-form ${errors.sujet ? "input-error" : ""}`}
+              className={`input-form ${
+                errors.sujet ? "input-error" : ""
+              } ${theme}`}
               {...register("sujet", { required: "Le sujet est requis." })}
               placeholder="Entrez le sujet"
             />
@@ -119,7 +131,9 @@ export function Form() {
           <label htmlFor="message">Message</label>
           <textarea
             id="message"
-            className={`textarea-form ${errors.message ? "input-error" : ""}`}
+            className={`textarea-form ${
+              errors.message ? "input-error" : ""
+            } ${theme}`}
             {...register("message", { required: "Le message est requis." })}
             placeholder="Entrez votre message"
           />
@@ -127,14 +141,11 @@ export function Form() {
             <p className="error-message">{errors.message.message}</p>
           )}
         </div>
-
-        <button
-          type="submit"
-          className="submit-button"
-          disabled={!isValid} 
-        >
-          Envoyer
-        </button>
+        <div className="container-button-val">
+          <button type="submit" className={`submit-button ${theme}`} disabled={!isValid} >
+            Envoyer
+          </button>
+        </div>
       </form>
 
       {isModalOpen && (

@@ -42,7 +42,7 @@ export function ProjectMap() {
           <img
             src={proj.image[0]} 
             alt={proj.name}
-            className="project-pictures"
+            className={`project-pictures ${theme}`}
             onClick={() => openCarousel(index)}
           />
           <div className="project-content">
@@ -75,7 +75,7 @@ export function ProjectMap() {
                 rel="noopener noreferrer"
                 className="icon-link"
               >
-                <i className="fab fa-github"></i>
+                <i className="fa-brands fa-github"></i>
               </Link>
             </div>
           </div>

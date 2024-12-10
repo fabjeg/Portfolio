@@ -24,12 +24,36 @@
   border-radius: 1rem;
   border: 7px solid #353535;
   transition: transform 0.3s ease;
+  box-shadow: 3px 3px 3px #202125, -3px -3px 3px #353535;
 }
 
+.project-pictures.light{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border: none;
+}
 .project-pictures:hover {
-  transform: scale(1.05); 
+  transform: scale(1.03); 
+}
+.project-pictures::after {
+  content: "Cliquez";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
+.project-pictures:hover::after {
+  opacity: 1;
+}
 .project-content {
   display: flex;
   flex-direction: column;
@@ -46,11 +70,7 @@
   margin-bottom: 2%;
   margin-left: 41%;
 }
-.border-title-project.light{
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
+
 
 .border-title-project::after {
   position: absolute;
@@ -84,9 +104,8 @@
 
 .font-competence {
   color: inherit;
-  border: 1px solid black;
   border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 3px 3px 3px #202125, inset -3px -3px 3px #353535;
   padding: 3%;
   font-size: 15px;
 }
@@ -106,7 +125,6 @@
 
 .span-link {
   margin-top: 10%;
-  border: 3px solid red;
 }
 
 .link {
@@ -120,6 +138,7 @@
   color: inherit;
   font-size: 3rem;
   transition: color 0.3s;
+  border-radius: 1rem;
 }
 
 .icon-link:hover {
@@ -134,3 +153,6 @@
     font-size: 11px;
   }
 }
+
+
+
