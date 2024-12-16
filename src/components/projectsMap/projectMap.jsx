@@ -1,64 +1,59 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import portfolio from "../../assets/data/data";
 import picturesSlide from "../../assets/data/dataSlide";
 import { Slide } from "../slide/slide";
 import "./style.css";
 import { ThemeContext } from "../../index";
-import { useContext } from "react";
 
 export function ProjectMap() {
   const { theme } = useContext(ThemeContext);
   const [showCarousel, setShowCarousel] = useState(false);
-  const [currentImages, setCurrentImages] = useState([]);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [carouselData, setCarouselData] = useState({ images: [], index: 0 });
 
   const openCarousel = (index) => {
-    if (index < picturesSlide.length && picturesSlide[index].img.length > 0) {
-      setCurrentImages(picturesSlide[index].img);
-      setCurrentImageIndex(0);
+    const images = picturesSlide[index]?.img || [];
+    if (images.length > 0) {
+      setCarouselData({ images, index: 0 });
       setShowCarousel(true);
     } else {
       console.error(`Images not found for index ${index}`);
     }
   };
 
-  const closeCarousel = () => {
-    setShowCarousel(false);
-  };
+  const closeCarousel = () => setShowCarousel(false);
 
   return (
     <div>
       {showCarousel && (
         <Slide
-          images={currentImages}
-          currentIndex={currentImageIndex}
+          images={carouselData.images}
+          currentIndex={carouselData.index}
           onClose={closeCarousel}
-          setCurrentIndex={setCurrentImageIndex} 
+          setCurrentIndex={(index) =>
+            setCarouselData((prev) => ({ ...prev, index }))
+          }
         />
       )}
+
       {portfolio.map((proj, index) => (
         <div key={index} className={`project-title ${theme}`}>
           <img
-            src={proj.image[0]} 
+            src={proj.image[0]}
             alt={proj.name}
             className={`project-pictures ${theme}`}
             onClick={() => openCarousel(index)}
           />
           <div className="project-content">
-            <div>
-              <h3>{proj.name}</h3>
-              <div className={`border-title-project ${theme}`}></div>
-            </div>
-            <font>{proj.text}</font>
+            <h3>{proj.name}</h3>
+            <div className={`border-title-project ${theme}`}></div>
+            <p>{proj.text}</p>
             <div className="project-competences">
-              {(Array.isArray(proj.competences) ? proj.competences : []).map(
-                (lang, langIndex) => (
-                  <span key={langIndex} className={`font-competence ${theme}`}>
-                    {lang}
-                  </span>
-                )
-              )}
+              {proj.competences?.map((lang, langIndex) => (
+                <span key={langIndex} className={`font-competence ${theme}`}>
+                  {lang}
+                </span>
+              ))}
             </div>
             <div className="link">
               <Link

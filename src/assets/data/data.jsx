@@ -43,7 +43,7 @@ const portfolio = [
     image: [Kasa],
     text: "En tant que développeur front-end freelance, j'ai travaillé avec Kasa, un leader de la location d'appartements entre particuliers en France. J'ai pris en charge la refonte totale de leur site web en utilisant React. Malgré l'absence temporaire du back-end, j'ai réussi à développer l'ensemble de l'application, les composants React, et les routes React Router.  ",
     code: "https://github.com/fabjeg/Kasa",
-    site: "https://fabjeg.github.io/Kasa/",
+    site: "https://arthurblanc.github.io/Kasa/",
     competences: ["React", "SASS", "Figma"],
   },
   {
